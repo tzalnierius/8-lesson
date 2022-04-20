@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #3cb371;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+}
+h2 {
+  color: #333333;
+}
+.flex-container {
+  height: 100vh;
+  max-width: 1024px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.col {
+  width: 65%;
+}
+.post .post-img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.post p {
+  position: relative;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  text-align: justify;
+  color: grey;
+  padding-bottom: 30px;
+}
+
+.post-info {
+  position: relative;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  text-align: justify;
+  color: grey;
+}
+
+.col .post p::before {
+  position: absolute;
+  content: "42 comments";
+  top: 80%;
+  right: 0%;
+}
+.col .post p::after {
+  position: absolute;
+  content: "By Joe Smith";
+  top: 80%;
+  left: 0%;
+}
+
+.col-2 .post-info::before {
+  position: absolute;
+  content: "42 comments";
+  top: 80%;
+  right: 4%;
+}
+.col-2 .post-info::after {
+  position: absolute;
+  content: "By Joe Smith";
+  top: 80%;
+  left: 7%;
+}
+
+.post {
+  background: white;
+  margin-top: 3rem;
+}
+
+.col .post-info {
+  padding: 1rem;
+}
+.col-2 .post-info {
+  padding: 1rem;
+  padding-bottom: 40px;
+}
+.container-main {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  margin-top: -1.5rem;
+  margin-bottom: 1rem;
+}
+
+.col-2 {
+  width: 30%;
+}
+
+@media (max-width: 320px) {
+  .container-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+  }
+  .col {
+    width: 100%;
+  }
+  .col-2 {
+    width: 100%;
+  }
+  .col .post p::before {
+    position: absolute;
+    content: "42 comments";
+    top: 90%;
+    right: 0%;
+  }
+  .col .post p::after {
+    position: absolute;
+    content: "By Joe Smith";
+    top: 90%;
+    left: 0%;
+  }
+  .col-2 .post-info::before {
+    position: absolute;
+    content: "42 comments";
+    top: 83%;
+    right: 4%;
+  }
+  .col-2 .post-info::after {
+    position: absolute;
+    content: "By Joe Smith";
+    top: 83%;
+    left: 7%;
+  }
+}
